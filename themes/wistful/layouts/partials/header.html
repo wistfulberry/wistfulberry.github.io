@@ -1,0 +1,81 @@
+<div class="container_hmenu">
+<h1 class="site_title" style="font-size: 3rem">{{ site.Title }}</h1>  
+<h2 class="top_menu">
+<div class="menu">
+  <nav id="main-menu" class="mm-normal">
+    <ul>
+    <li> <button id="mob-x-icon" class="menu-btn" arial-label="x-icon"> {{ partial "icon.html" "xmark" }} </button> </li>
+    {{ range .Site.Menus.main }}
+      <li><a id="mobile-menu" href="{{ .URL }}" aria-label="{{ .Name }}">
+	{{ .Name }}</li></a>
+    {{ end }}
+    </ul>
+  </nav>
+    <div class="side-menu">
+    {{ if .Site.Params.showThemeSwitcher | default false }}
+    <button id="theme-switcher" class="menu-btn" aria-label="Theme switcher">
+      <div id="moon">
+      {{ partial "icon.html" "moon" }}
+      </div>
+      <div id="sun">
+      {{ partial "icon.html" "sun" }}
+      </div>
+    </button>
+    {{ end }}
+    </div>
+  </div>
+  <script>
+  (function() {
+    document.addEventListener('DOMContentLoaded', function() {
+    const openBtn = document.getElementById('mob-hb-icon');
+    const closeBtn = document.getElementById('mob-x-icon');
+    const mainMenu = document.getElementById('main-menu');
+    const body = document.body;
+    openBtn.addEventListener('click', function() {
+        mainMenu.classList.replace('mm-normal', 'mm-mobile-open');
+        closeBtn.style.display = 'block';
+        body.style.overflow = 'hidden';
+    });
+    closeBtn.addEventListener('click', function() {
+        mainMenu.classList.replace('mm-mobile-open', 'mm-normal');
+        closeBtn.style.display = 'none';
+        body.style.overflow = '';
+    });
+    })
+  })();
+  </script>
+  {{ if .Site.Params.highlightCurrentMenu }}
+  <script>
+  (function() {
+    var mainmenu = document.getElementById('main-menu');
+    if (!mainmenu) return;
+
+    var path = window.location.pathname;
+    var links = mainmenu.querySelectorAll('a');
+
+    links.forEach(function(link) {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('active');
+      }
+    });
+  })();
+  </script>
+  {{ end }}
+</div>
+
+</h2>
+
+<div class="flex-container">
+<div class="item_icons">
+	<a href="">K  </a>
+	<a href="">  E  </a>
+	<a href="https://www.instagram.com/wistfulberry/">  X  </a>
+	<a href="">  J</a>
+</div>
+<div class="hamb-btn">
+<button id="mob-hb-icon" class="menu-btn" aria-label="Hamburger icon">
+      {{ partial "icon.html" "strawberry" }}
+</button>
+</div>
+</div>
+</div>

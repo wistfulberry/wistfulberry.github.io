@@ -1,0 +1,5 @@
+{{ $localMatch := printf "%s%s" (.Get 0) "/*"}}
+{{ $images := (.Page.Resources.ByType "image")}}
+ <img src="{{ index $images (.Get 1) }}" alt="" class="responsive" style="border-radius: 10px">
+
+

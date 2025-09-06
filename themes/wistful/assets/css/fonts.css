@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'ocean_view';
+  src: url('/fonts/ocean_view/OceanView.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'handmade';
+  src: url('/fonts/handmade/HandmadeRegular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'lgc';
+  src: url('/fonts/louis_george_caf/LouisGeorgeCafe.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'icons';
+  src: url('/fonts/pwhandysocialicons/PWHandySocialIcons.ttf') format('truetype');
+}

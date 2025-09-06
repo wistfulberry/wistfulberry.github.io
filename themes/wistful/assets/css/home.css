@@ -1,0 +1,32 @@
+
+.home_title { 
+  font-family: ocean_view;
+  font-size: 100px;
+}
+
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: HotPink;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+}
+
+.item {
+  width: 10em;
+}
