@@ -1,7 +1,11 @@
-baseURL: https://wistful.berry/
+baseURL: "https://wistfulberry.github.io/"
 languageCode: en-us
 title: Wistful Berry
 theme: wistful
+
+caches:
+  images:
+    dir: :cacheDir/images
 
 menus:
   main:

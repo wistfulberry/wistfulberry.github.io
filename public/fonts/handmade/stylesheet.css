@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Handmade';
-    src: url('HandmadeRegular.woff2') format('woff2'),
-        url('HandmadeRegular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
